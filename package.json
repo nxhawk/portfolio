@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "portfolio",
+  "homepage": "https://usnightowl.github.io/portfolio",
   "private": true,
   "type": "module",
   "scripts": {
