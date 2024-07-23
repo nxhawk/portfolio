@@ -4,6 +4,8 @@
 
 [Gitmoji](https://gitmoji.dev/)
 
+[Nuxt github page](https://github.com/lucpotage/nuxt-github-pages)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.

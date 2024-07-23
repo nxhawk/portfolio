@@ -1,6 +1,8 @@
 <template>
   <div>
-    <h1>Welcome to the homepage</h1>
+    <CommonFramerWrapper :y="0" :x="-100" class="h-full w-auto flex flex-col justify-start gap-4">
+      <HomeHeroTexts />
+    </CommonFramerWrapper>
   </div>
 </template>
 
