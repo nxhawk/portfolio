@@ -13,6 +13,7 @@ defineOptions({
   inheritAttrs: false,
 });
 
+// eslint-disable-next-line vue/require-default-prop
 const props = withDefaults(defineProps<TooltipContentProps & { class?: HTMLAttributes["class"] }>(), {
   sideOffset: 4,
 });
