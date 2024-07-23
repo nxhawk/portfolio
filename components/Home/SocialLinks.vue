@@ -1,5 +1,5 @@
 <template>
-  <div class="h-fit w-full p-4 py-2 flex gap-3">
+  <div class="h-fit w-full px-4 flex gap-3">
     <div v-for="(item, idx) in links" :key="item.name">
       <CommonFramerWrapper :delay="200 + idx * 250" :y="50">
         <NuxtLink
