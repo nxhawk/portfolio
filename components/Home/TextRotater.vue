@@ -1,5 +1,6 @@
+<!-- eslint-disable vue/html-self-closing -->
 <template>
-  <div class="py-4 overflow-hidden">
+  <div class="py-2 md:py-4 overflow-hidden">
     <div class="font-poppins text-base sm:text-2xl [text-wrap:balance] text-gray-700">
       I am a Software Developer &<br />
       <span

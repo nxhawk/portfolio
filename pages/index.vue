@@ -1,6 +1,6 @@
 <template>
   <div>
-    <CommonFramerWrapper :y="0" :x="-100" class="h-full w-auto flex flex-col justify-start gap-4">
+    <CommonFramerWrapper :y="0" :x="-100" class="h-full w-auto flex flex-col justify-start gap-2 md:gap-4">
       <HomeHeroTexts />
     </CommonFramerWrapper>
   </div>
