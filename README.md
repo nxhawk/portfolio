@@ -1,3 +1,9 @@
+[Set up husky](https://github.com/apivideo/Next.js_Starters-)
+
+[Set up commintlint with gitmoji](https://www.npmjs.com/package/commitlint-config-gitmoji)
+
+[Gitmoji](https://gitmoji.dev/)
+
 # Nuxt 3 Minimal Starter
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
