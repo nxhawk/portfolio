@@ -492,6 +492,13 @@
   dependencies:
     find-up "^7.0.0"
 
+"@commitlint/types@^17":
+  version "17.8.1"
+  resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-17.8.1.tgz#883a0ad35c5206d5fef7bc6ce1bbe648118af44e"
+  integrity sha512-PXDQXkAmiMEG162Bqdh9ChML/GJZo6vU+7F03ALKDK8zYc6SuAr47LjG7hGYRqUOz+WK0dU7bQ0xzuqFMdxzeQ==
+  dependencies:
+    chalk "^4.1.0"
+
 "@commitlint/types@^19.0.3":
   version "19.0.3"
   resolved "https://registry.yarnpkg.com/@commitlint/types/-/types-19.0.3.tgz#feff4ecac2b5c359f2a57f9ab094b2ac80ef0266"
@@ -968,6 +975,26 @@
     "@floating-ui/dom" "^1.0.0"
     "@floating-ui/utils" "^0.2.5"
     vue-demi ">=0.13.0"
+
+"@gitmoji/commit-types@1.1.5":
+  version "1.1.5"
+  resolved "https://registry.yarnpkg.com/@gitmoji/commit-types/-/commit-types-1.1.5.tgz#8ca89aeea4e253a3818ac63206b4eb4f2352c4ff"
+  integrity sha512-8D3FZMRY+gtYpTcHG1SOGmm9CFqxNh6rI9xDoCydxHxnWgqInbdF3nk9gibW5gXA58Hf2cVcJaLEcGOKLRAtmw==
+
+"@gitmoji/gitmoji-regex@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@gitmoji/gitmoji-regex/-/gitmoji-regex-1.0.0.tgz#937645b0bb90de70538a172efb5a07b81d6d22fd"
+  integrity sha512-+BFXxcWCxn0UIYuG1v5n9SfaCCS8tw95j1x3QsTJRdGGiihRyVLTHiu1wrHlzH3z4nYXKjCKiZFTdWwMjRI+gQ==
+  dependencies:
+    emoji-regex "^10"
+    gitmojis "^3"
+
+"@gitmoji/parser-opts@1.4.0":
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@gitmoji/parser-opts/-/parser-opts-1.4.0.tgz#16891bceab2dd2c44c7fd930413e959a033c27f9"
+  integrity sha512-zzmx/vtpdB/ijjUm7u9OzHNCXWKpSbzVEgVzOzhilMgoTBlUDyInZFUtiCTV+Wf4oCP9nxGa/kQGQFfN+XLH1g==
+  dependencies:
+    "@gitmoji/gitmoji-regex" "1.0.0"
 
 "@humanwhocodes/module-importer@^1.0.1":
   version "1.0.1"
@@ -2780,7 +2807,7 @@ chalk@^2.4.2:
     escape-string-regexp "^1.0.5"
     supports-color "^5.3.0"
 
-chalk@^4.0.0, chalk@^4.1.1, chalk@^4.1.2:
+chalk@^4.0.0, chalk@^4.1.0, chalk@^4.1.1, chalk@^4.1.2:
   version "4.1.2"
   resolved "https://registry.yarnpkg.com/chalk/-/chalk-4.1.2.tgz#aac4e2b7734a740867aeb16bf02aad556a1e7a01"
   integrity sha512-oKnbhFyRIXpUuez8iBMmyEa4nbj4IOQyuhc/wy9kY7/WVPcwIO9VA668Pu8RkO7+0G76SLROeyw9CpQ061i4mA==
@@ -2950,6 +2977,25 @@ comment-parser@1.4.1, comment-parser@^1.4.0:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/comment-parser/-/comment-parser-1.4.1.tgz#bdafead37961ac079be11eb7ec65c4d021eaf9cc"
   integrity sha512-buhp5kePrmda3vhc5B9t7pUQXAb2Tnd0qgpkIhPhkHXxJpiPJ11H0ZEU0oBpJ2QztSbzG/ZxMj/CHsYJqRHmyg==
+
+commitlint-config-gitmoji@^2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/commitlint-config-gitmoji/-/commitlint-config-gitmoji-2.3.1.tgz#754a2167068c6a80644969b379341e8a9f041aca"
+  integrity sha512-T15ssbsyNc6szHlnGWo0/xvIA1mObqM70E9TwKNVTpksxhm+OdFht8hvDdKJAVi4nlZX5tcfTeILOi7SHBGH3w==
+  dependencies:
+    "@commitlint/types" "^17"
+    "@gitmoji/commit-types" "1.1.5"
+    "@gitmoji/parser-opts" "1.4.0"
+    commitlint-plugin-gitmoji "2.2.6"
+
+commitlint-plugin-gitmoji@2.2.6:
+  version "2.2.6"
+  resolved "https://registry.yarnpkg.com/commitlint-plugin-gitmoji/-/commitlint-plugin-gitmoji-2.2.6.tgz#cae0b406646c3965b96e217b5e8a33d1de5fc7e6"
+  integrity sha512-oKHPHeNXby0Ix0ZbHVSK5ZyPx1V4fyBjLOy93cYwXhOEPXe36nkDc/HDPFfQpzx1vz39277TaP9LScbqTbscfQ==
+  dependencies:
+    "@commitlint/types" "^17"
+    "@gitmoji/gitmoji-regex" "1.0.0"
+    gitmojis "^3"
 
 commondir@^1.0.1:
   version "1.0.1"
@@ -3503,6 +3549,11 @@ electron-to-chromium@^1.4.820:
   version "1.4.832"
   resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.832.tgz#d25882ce0a9237577b039bffa124ecef1822003b"
   integrity sha512-cTen3SB0H2SGU7x467NRe1eVcQgcuS6jckKfWJHia2eo0cHIGOqHoAxevIYZD4eRHcWjkvFzo93bi3vJ9W+1lA==
+
+emoji-regex@^10:
+  version "10.3.0"
+  resolved "https://registry.yarnpkg.com/emoji-regex/-/emoji-regex-10.3.0.tgz#76998b9268409eb3dae3de989254d456e70cfe23"
+  integrity sha512-QpLs9D9v9kArv4lfDEgg1X/gN5XLnf/A6l9cs8SPZLRZR3ZkY9+kwIQTxm+fsSej5UMYGE8fdoaZVIBlqG0XTw==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -4524,6 +4575,11 @@ git-url-parse@^14.0.0:
   integrity sha512-8xg65dTxGHST3+zGpycMMFZcoTzAdZ2dOtu4vmgIfkTFnVHBxHMzBC2L1k8To7EmrSiHesT8JgPLT91VKw1B5g==
   dependencies:
     git-up "^7.0.0"
+
+gitmojis@^3:
+  version "3.14.0"
+  resolved "https://registry.yarnpkg.com/gitmojis/-/gitmojis-3.14.0.tgz#b6756f46d5b21204840ce4eadd51a5fbe07032a1"
+  integrity sha512-wPdXxKWfp2dJE6/ch8TDJjYdXvr+4uV67AEcbImj5QC4DmP6Byje1goJL8WgMPFnLY63eadK6oxtnSjdRFzS6g==
 
 glob-parent@^5.1.2, glob-parent@~5.1.2:
   version "5.1.2"
