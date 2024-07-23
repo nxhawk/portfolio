@@ -2,6 +2,7 @@
   <div>
     <CommonFramerWrapper :y="0" :x="-100" class="h-full w-auto flex flex-col justify-start gap-2 md:gap-4">
       <HomeHeroTexts />
+      <HomeSocialLinks />
     </CommonFramerWrapper>
   </div>
 </template>

@@ -1,7 +1,9 @@
 <template>
-  <!-- TODO: hidden when scroll -->
   <CommonFramerWrapper
-    class="fixed top-5 left-0 right-0 m-auto border border-black rounded-full p-2 bg-transparent flex gap-3 transition ease-in-out delay-150 h-fit w-fit hover:-translate-y-1 hover:scale-100 max-sm:gap-1"
+    :class="
+      'fixed top-5 left-0 right-0 m-auto border border-black rounded-full p-2 bg-transparent px-4 flex gap-3 transition ease-in-out delay-150 h-fit w-fit hover:-translate-y-1 hover:scale-100 max-sm:gap-1 ' +
+      (show ? 'flex' : 'hidden')
+    "
     :y="-100"
   >
     <TooltipProvider v-for="item in items" :key="item.name">
@@ -32,8 +34,10 @@
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { cn } from "~/lib/utils";
 import { buttonVariants } from "@/components/ui/button";
+import { useShowNavbarScrolling } from "@/composables/useShowNavbarScrolling";
 
 const route = useRoute();
+const { show } = useShowNavbarScrolling();
 
 const items = [
   { name: "Home", icon: "Home", link: "/" },
