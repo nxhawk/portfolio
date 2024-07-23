@@ -1,9 +1,14 @@
 <template>
-  <div>
+  <div class="flex items-center">
     <CommonFramerWrapper :y="0" :x="-100" class="h-full w-auto flex flex-col justify-start gap-2 md:gap-4">
       <HomeHeroTexts />
       <HomeSocialLinks />
+      <HomeDownLoadResumeBtn />
     </CommonFramerWrapper>
+    <CommonFramerWrapper :y="0" :x="100" class="h-full w-[40%] relative block max-lg:hidden pb-12">
+      <HomeHeroImage />
+    </CommonFramerWrapper>
+    <HomeGithubButton />
   </div>
 </template>
 
