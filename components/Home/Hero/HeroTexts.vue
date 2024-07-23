@@ -6,13 +6,3 @@
   </h1>
   <HomeTextRotater />
 </template>
-
-<style lang="css" scoped>
-.name_underline::after {
-  content: "";
-  display: block;
-  width: 8rem;
-  height: 0.6rem;
-  background-color: #2f7df4;
-}
-</style>
