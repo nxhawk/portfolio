@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@vueuse/motion/nuxt", "shadcn-nuxt"],
   app: {
+    baseURL: "/portfolio",
+    buildAssetsDir: "assets",
     head: {
       charset: "utf-8",
       viewport: "width=500, initial-scale=1",

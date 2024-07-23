@@ -20,6 +20,6 @@ useHead({
       content: "Portfolio",
     },
   ],
-  link: [{ rel: "icon", type: "image/x-icon", href: "/logo.png" }],
+  link: [{ rel: "icon", type: "image/x-icon", href: "/portfolio/logo.png" }],
 });
 </script>
