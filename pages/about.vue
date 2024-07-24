@@ -1,9 +1,6 @@
 <template>
   <div class="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
-    <Badge class="gap-2">
-      <CommonIcon name="User2" :stroke-width="2" class="h-5 w-5" />
-      About me
-    </Badge>
+    <CommonBadge icon="User2" name="About me" />
     <div class="flex flex-col gap-3">
       <CommonHeading>
         Software Engineer And Fullstack <br />
@@ -43,14 +40,13 @@
 </template>
 
 <script setup lang="ts">
-import { Badge } from "@/components/ui/badge";
 const items = [
   { hobby: "Coding" },
   { hobby: "Playing games" },
   { hobby: "Listen to music" },
   { hobby: "Reading Novel" },
   { hobby: "Watching Anime" },
-  { hobby: "Watching Stream" },
+  { hobby: "Watching Live Streams" },
   { hobby: "Creating Cool Projects" },
 ];
 </script>

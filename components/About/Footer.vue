@@ -14,7 +14,7 @@
 <script setup lang="ts">
 const items = [
   { name: "Language", answer: "English UK", icon: "Languages", class: "h-8 w-8" },
-  { name: "Nationality", answer: "Vietname", icon: "Globe2", class: "h-8 w-8" },
+  { name: "Nationality", answer: "Vietnam", icon: "Globe2", class: "h-8 w-8" },
   { name: "Gender", answer: "Male", icon: "Dna", class: "h-8 w-8" },
 ];
 </script>

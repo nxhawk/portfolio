@@ -9,6 +9,12 @@
 }
 
 @font-face {
+  font-family: "Poppins-Bold";
+  font-weight: 700;
+  src: url("@/public/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
   font-family: "Rubik";
   font-weight: 700;
   src: url("@/public/fonts/Rubik/Rubik-Medium.ttf") format("truetype");

@@ -16,6 +16,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
+        poppinsBold: ["Poppins-Bold", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
         rubik: ["Rubik", "sans-serif"],
       },
