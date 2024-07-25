@@ -6,7 +6,7 @@
       </CardHeader>
       <CardContent>
         <p class="text-base font-poppins">{{ project.description }}</p>
-        <div class="flex flex-wrap gap-2 mt-2">
+        <div class="flex flex-wrap gap-1 mt-2">
           <ProjectsChip v-for="tag in project.tags" :key="tag" :tag="tag" />
         </div>
       </CardContent>

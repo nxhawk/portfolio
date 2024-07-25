@@ -47,7 +47,7 @@ const projects: IProject[] = [
     title: "Canteen Management - POS systems allow ordering food",
     description:
       "There are two sides: users can order through the system and pay, the admin side receives orders, processes and statistics revenue according to criteria.",
-    tags: ["Postgresql", "Expressjs", "Handlebars", "Nodejs"],
+    tags: ["Expressjs", "Postgresql", "Handlebars", "Nodejs"],
     link: `${prefix_github}/mihoag/CanteenManagement`,
   },
 ];

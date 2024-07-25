@@ -32,6 +32,7 @@ function tagToColor(tagName: string) {
       return "bg-teal-200 text-teal-600";
     case "tailwind":
     case "tailwindcss":
+    case "nodejs":
       return "bg-emerald-200 text-emerald-600";
     case "nextjs":
       return "bg-slate-700 text-slate-50";
@@ -47,7 +48,6 @@ function tagToColor(tagName: string) {
       return "bg-blue-200 text-blue-500";
     case "vuejs":
     case "expressjs":
-    case "nodejs":
       return "bg-green-200 text-green-500";
     case "pinia":
       return "bg-orange-100 text-orange-500";
