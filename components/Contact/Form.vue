@@ -65,18 +65,23 @@ const form = reactive({
 });
 async function sendEmail() {
   const mail = useMail();
-
+  let description = "Message submitted successfully";
   isLoading.value = true;
-  await mail.send({
-    from: `Contact Form ${form.email}`,
-    subject: `${form.name} From Contact Form - Portfolio.`,
-    text: `Sender email: ${form.email} ${form.message}`,
-  });
+  try {
+    await mail.send({
+      from: `Contact Form ${form.email}`,
+      subject: `${form.name} From Contact Form - Portfolio.`,
+      text: `Sender email: ${form.email} ${form.message}`,
+    });
+  } catch (error) {
+    console.log(error);
+    description = "Something went wrong";
+  }
   isLoading.value = false;
 
   toast({
     title: "Send message to Nguyen Nhat Hao",
-    description: "Message submitted successfully",
+    description,
   });
 
   await navigateTo("/");
