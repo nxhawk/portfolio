@@ -4,7 +4,7 @@
     <CommonBadge icon="User2" name="About me" />
     <div class="flex flex-col gap-3">
       <CommonHeading>
-        Software Engineer And Fullstack <br />
+        Software Engineer And Web <br />
         Developer, Based In Vietnam.
       </CommonHeading>
       <CommonFramerWrapper :x="100" :y="0">

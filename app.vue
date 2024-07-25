@@ -5,10 +5,13 @@
       <NuxtLoadingIndicator :height="5" :duration="3000" :throttle="400" />
       <NuxtPage />
     </NuxtLayout>
+    <Toaster />
   </Html>
 </template>
 
 <script setup lang="ts">
+import Toaster from "@/components/ui/toast/Toaster.vue";
+
 useHead({
   title: "Nguyen Nhat Hao",
   titleTemplate: "%s - Portfolio",

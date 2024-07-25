@@ -3,7 +3,29 @@ export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   ssr: true,
   devtools: { enabled: true },
-  modules: ["@nuxt/eslint", "@nuxtjs/tailwindcss", "@vueuse/motion/nuxt", "shadcn-nuxt", "@nuxt/image"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxtjs/tailwindcss",
+    "@vueuse/motion/nuxt",
+    "shadcn-nuxt",
+    "@nuxt/image",
+    [
+      "nuxt-mail",
+      {
+        message: {
+          to: "nguyennhathao01012003@gmail.com",
+        },
+        smtp: {
+          host: "smtp.gmail.com",
+          port: 587,
+          auth: {
+            user: "nguyennhathao01012003@gmail.com",
+            pass: "jvvs tjjh vgbb jekt",
+          },
+        },
+      },
+    ],
+  ],
   app: {
     baseURL: "/portfolio",
     buildAssetsDir: "assets",
