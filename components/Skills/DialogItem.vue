@@ -2,6 +2,7 @@
   <Dialog>
     <DialogTrigger>
       <NuxtImg :src="item.img" :alt="item.alt" class="h-10 md:h-14 w-auto" />
+      <NuxtImg :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto hidden" />
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>
