@@ -1,6 +1,6 @@
 <template>
   <div class="h-full w-full relative flex flex-col gap-5 overflow-hidden items-start mb-2">
-    <CommonBadge icon="Lightbulb" name="My skills" />
+    <CommonBadge icon="Lightbulb" name="Skills" />
     <div class="flex flex-col gap-3">
       <CommonHeading>My Technical Experience/Skills.</CommonHeading>
       <CommonFramerWrapper :y="0" :x="200">

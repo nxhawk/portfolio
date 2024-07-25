@@ -16,7 +16,7 @@
       class="relative w-3/4 border-l-4 border-l-[#3c3c3c] p-4 gap-3 education_point"
     >
       <div class="text-2xl font-rubik max-sm:text-xl" v-html="work.title" />
-      <p className=" font-poppins text-base w-full text-primary  max-sm:text-xs">
+      <p class="font-poppins text-base w-full text-primary max-sm:text-xs">
         {{ work.description }}
       </p>
     </CommonFramerWrapper>
