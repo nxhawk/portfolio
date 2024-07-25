@@ -64,6 +64,27 @@ const frontend: ISkill[] = [
     description:
       "Flutter is an open-source UI software development kit created by Google. It can be used to develop cross platform applications from a single codebase for the web, Fuchsia, Android, iOS, Linux, macOS, and Windows. First described in 2015, Flutter was released in May 2017. Flutter is used internally by Google in apps such as Google Pay and Google Earth as well as by other software developers including ByteDance and Alibaba.",
   },
+  {
+    alt: "redux",
+    img: "/skills/frontend/redux-icon.svg",
+    official: "/skills/frontend/redux-icon-official.svg",
+    description:
+      "Redux is a JS library for predictable and maintainable global state management. It helps you write applications that behave consistently, run in different environments (client, server, and native), and are easy to test. On top of that, it provides a great developer experience, such as live code editing combined with a time traveling debugger. You can use Redux together with React, or with any other view library. It is tiny (2kB, including dependencies), but has a large ecosystem of addons available.",
+  },
+  {
+    alt: "zustand",
+    img: "/skills/frontend/zustand.png",
+    official: "/skills/frontend/zustand.png",
+    description:
+      "Zustand is a small, fast, and scalable bearbones state management solution. Zustand has a comfy API based on hooks. It isn't boilerplatey or opinionated, but has enough convention to be explicit and flux-like. Don't disregard it because it's cute, it has claws! Lots of time was spent to deal with common pitfalls, like the dreaded zombie child problem, React concurrency, and context loss between mixed renderers. It may be the one state manager in the React space that gets all of these right.",
+  },
+  {
+    alt: "pinia",
+    img: "/skills/frontend/pinia.svg",
+    official: "/skills/frontend/pinia.svg",
+    description:
+      "Pinia started as an experiment to redesign what a Store for Vue could look like with the Composition API around November 2019. Since then, the initial principles have remained the same, but Pinia works for both Vue 2 and Vue 3 and doesn't require you to use the composition API. The API is the same for both except for installation and SSR, and these docs are targeted to Vue 3 with notes about Vue 2 whenever necessary so it can be read by Vue 2 and Vue 3 users!",
+  },
 ];
 
 export default frontend;
