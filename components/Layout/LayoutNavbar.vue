@@ -15,7 +15,7 @@
               cn(
                 buttonVariants({ variant: 'ghost', size: 'sm' }),
                 'hover:text-[#2f7df4]',
-                route.path === item.link && 'text-[#2f7df4] bg-zinc-100',
+                checkRoute(route.path, item.link) && 'text-[#2f7df4] bg-zinc-100',
               )
             "
           >
@@ -45,7 +45,15 @@ const items = [
   { name: "Skills", icon: "Lightbulb", link: "/skills" },
   { name: "Projects", icon: "Layers", link: "/projects" },
   { name: "Work", icon: "Briefcase", link: "/work" },
-  { name: "More", icon: "PackagePlus", link: "/more" },
+  { name: "Blogs", icon: "Rss", link: "/blogs" },
   { name: "Contact", icon: "Phone", link: "/contact" },
 ];
+
+function checkRoute(currentRoute: string, targetRoute: string) {
+  if (currentRoute === targetRoute) return true;
+  if (currentRoute === targetRoute + "/") return true;
+  if (currentRoute.includes(targetRoute) && targetRoute === "/blogs") return true;
+
+  return false;
+}
 </script>
