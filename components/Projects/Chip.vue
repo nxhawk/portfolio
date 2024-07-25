@@ -58,7 +58,7 @@ function tagToColor(tagName: string) {
     case "nuxtjs":
       return "bg-green-200 text-green-500";
     case "handlebars":
-      return "bg-yellow-100 text-yellow-500";
+      return "bg-yellow-100 text-yellow-600";
     default:
       return "bg-gray-200 text-gray-950";
   }

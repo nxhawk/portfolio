@@ -1,3 +1,4 @@
+<!-- eslint-disable vue/html-self-closing -->
 <template>
   <div class="h-full w-full relative flex flex-col items-start gap-5 overflow-hidden">
     <CommonBadge icon="User2" name="About me" />
