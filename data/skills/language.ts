@@ -3,14 +3,14 @@ import type { ISkill } from ".";
 const language: ISkill[] = [
   {
     alt: "javascript",
-    img: "/skills/language/javascript-original.svg",
+    img: "/skills/language/javascript-original-official.svg",
     official: "/skills/language/javascript-original-official.svg",
     description:
       "JavaScript is a scripting language that enables you to create dynamically updating content, control multimedia, animate images, and pretty much everything else.",
   },
   {
     alt: "typescript",
-    img: "/skills/language/typescript-original.svg",
+    img: "/skills/language/typescript-original-official.svg",
     official: "/skills/language/typescript-original-official.svg",
     description:
       "TypeScript is a strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.",
