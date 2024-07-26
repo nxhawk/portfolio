@@ -6,6 +6,7 @@ const props = defineProps({
   },
 });
 </script>
+<!-- eslint-disable vue/html-self-closing -->
 
 <template>
   <div

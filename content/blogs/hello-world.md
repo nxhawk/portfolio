@@ -13,7 +13,8 @@ This is a paragraph.
 
 This is another paragraph.
 
-![Earth from Space](blog/01.jpg)
+:::callimage{img="/blog/01.jpg" alt="Earth from Space"}
+:::
 
 ## This is a heading 2
 
@@ -60,4 +61,6 @@ You can use inline code
 
 `const hello = 'world';`
 
-:::callout{title="Hello World Callout"} This is a quick tip about markdown :::
+:::callout{title="Hello, world!"}
+This is bold
+:::
