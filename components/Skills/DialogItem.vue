@@ -2,13 +2,13 @@
 <template>
   <Dialog>
     <DialogTrigger>
-      <img :src="item.img" :alt="item.alt" class="h-10 md:h-14 w-auto" />
-      <img :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto hidden" />
+      <img :src="'/portfolio' + item.img" :alt="item.alt" class="h-10 md:h-14 w-auto" />
+      <img :src="'/portfolio' + item.official" :alt="item.alt" class="h-10 md:h-14 w-auto hidden" />
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>
         <DialogTitle>
-          <img :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto" />
+          <img :src="'/portfolio' + item.official" :alt="item.alt" class="h-10 md:h-14 w-auto" />
         </DialogTitle>
         <DialogDescription>{{ item.description }}</DialogDescription>
       </DialogHeader>
