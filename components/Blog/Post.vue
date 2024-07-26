@@ -14,7 +14,7 @@ const props = defineProps({
     class="bg-white rounded-lg shadow-md overflow-hidden hover:opacity-75"
   >
     <NuxtLink :to="post._path">
-      <NuxtImg :src="post.cover" alt="Blog Post Cover Image" class="w-full h-48 object-cover" />
+      <img :src="post.cover" alt="Blog Post Cover Image" class="w-full h-48 object-cover" />
     </NuxtLink>
     <div class="p-6">
       <h2 class="text-xl font-bold mb-2">{{ post.title }}</h2>

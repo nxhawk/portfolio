@@ -1,13 +1,14 @@
+<!-- eslint-disable vue/html-self-closing -->
 <template>
   <Dialog>
     <DialogTrigger>
-      <NuxtImg :src="item.img" :alt="item.alt" class="h-10 md:h-14 w-auto" />
-      <NuxtImg :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto hidden" />
+      <img :src="item.img" :alt="item.alt" class="h-10 md:h-14 w-auto" />
+      <img :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto hidden" />
     </DialogTrigger>
     <DialogContent>
       <DialogHeader>
         <DialogTitle>
-          <NuxtImg :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto" />
+          <img :src="item.official" :alt="item.alt" class="h-10 md:h-14 w-auto" />
         </DialogTitle>
         <DialogDescription>{{ item.description }}</DialogDescription>
       </DialogHeader>
