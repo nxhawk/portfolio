@@ -15,7 +15,7 @@ Example
   :wrench: fix(config): add or update configuration files
   :truck: chore: move or rename resources (e.g.: files, path, routes, etc..)
   :bento: chore: add or update assets
-  :hammmer: add or update development scripts
+  :hammer: add or update development scripts
 */
 
 module.exports = { extends: ["gitmoji"] };
