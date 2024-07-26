@@ -3,8 +3,18 @@
 const route = useRoute();
 const { path } = useRoute();
 
+const { data }: { data: Record<string, any> } = await useAsyncData(`content-${path}`, () => {
+  return queryContent().where({ _path: path }).findOne();
+});
+
+function formatTitle(title: string) {
+  console.log(data.value.title);
+  const s = title.replaceAll("-", " ").trim();
+  return s && s[0].toUpperCase() + s.slice(1);
+}
+
 useHead({
-  title: `Blog ${route.params.slug}`,
+  title: `Blog ${data.value.title || formatTitle(route.params.slug[0])}`,
   titleTemplate: "%s - Portfolio",
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -16,10 +26,6 @@ useHead({
   ],
   link: [{ rel: "icon", type: "image/x-icon", href: "/portfolio/logo.png" }],
 });
-
-const { data }: { data: Record<string, any> } = await useAsyncData(`content-${path}`, () => {
-  return queryContent().where({ _path: path }).findOne();
-});
 </script>
 
 <template>
@@ -28,8 +34,7 @@ const { data }: { data: Record<string, any> } = await useAsyncData(`content-${pa
     <div class="flex flex-col gap-3">
       <CommonHeading> My Blog </CommonHeading>
     </div>
-    <main class="bg-white/80 rounded-lg w-full p-4 md:p-5">
-      <!-- <ContentDoc class="prose"/> -->
+    <CommonFramerWrapper class="bg-white/80 rounded-lg w-full p-4 md:p-5">
       <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-7xl" />
       <div class="my-8 flex flex-wrap gap-2">
         <NuxtLink
@@ -42,6 +47,6 @@ const { data }: { data: Record<string, any> } = await useAsyncData(`content-${pa
           {{ tag }}
         </NuxtLink>
       </div>
-    </main>
+    </CommonFramerWrapper>
   </div>
 </template>

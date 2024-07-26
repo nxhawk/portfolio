@@ -1,7 +1,7 @@
 ---
 title: Hello, World!
 description: This is my very first blog post and I'm so excited to share it with you!
-date: 2023-05-23
+date: 2023-05-25
 cover: blog/01.jpg
 tags:
   - blog

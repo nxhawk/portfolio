@@ -3,17 +3,18 @@
     <CommonBadge icon="Rss" name="Blogs" />
     <div class="flex flex-col gap-3">
       <CommonHeading> My Blogs </CommonHeading>
+      <CommonFramerWrapper :x="200" :y="0">
+        <p class="font-poppins text-xl w-full text-primary max-sm:text-lg">
+          I like to write about anything that I am currently working or something new that interests me.
+        </p>
+      </CommonFramerWrapper>
     </div>
-    I like to write about anything that I am currently working or something new that interests me. If you would like me
-    to write about something or be a guest blogger on your blog please reach out to me on Facebook. If you would like to
-    subscribe to an RSS feed you can find it here.
-
-    <section class="grid md:grid-cols-3 mt-8 gap-10">
+    <section class="mt-2 grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-5">
       <BlogPost :posts="posts" />
     </section>
   </div>
 </template>
 
 <script setup>
-const { data: posts } = await useAsyncData("posts", () => queryContent("/blogs").find());
+const { data: posts } = await useAsyncData("posts", () => queryContent("/blogs").sort({ date: -1 }).find());
 </script>
