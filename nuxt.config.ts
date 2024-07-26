@@ -25,7 +25,14 @@ export default defineNuxtConfig({
         },
       },
     ],
+    "@nuxt/content",
   ],
+  content: {
+    highlight: {
+      theme: "nord",
+      preload: ["ts", "js", "css", "java", "json", "bash", "vue"],
+    },
+  },
   app: {
     baseURL: "/portfolio",
     buildAssetsDir: "assets",
