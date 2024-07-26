@@ -1,5 +1,8 @@
 <!-- eslint-disable @typescript-eslint/no-explicit-any -->
 <script setup lang="ts">
+import { cn } from "@/lib/utils";
+import { buttonVariants } from "@/components/ui/button";
+
 const route = useRoute();
 const { path } = useRoute();
 
@@ -8,13 +11,12 @@ const { data }: { data: Record<string, any> } = await useAsyncData(`content-${pa
 });
 
 function formatTitle(title: string) {
-  console.log(data.value.title);
   const s = title.replaceAll("-", " ").trim();
   return s && s[0].toUpperCase() + s.slice(1);
 }
 
 useHead({
-  title: `Blog ${data.value.title || formatTitle(route.params.slug[0])}`,
+  title: `Blog ${data?.value?.title || formatTitle(route.params.slug[0])}`,
   titleTemplate: "%s - Portfolio",
   meta: [
     { name: "viewport", content: "width=device-width, initial-scale=1" },
@@ -35,16 +37,30 @@ useHead({
       <CommonHeading> My Blog </CommonHeading>
     </div>
     <CommonFramerWrapper class="bg-white/80 rounded-lg w-full p-4 md:p-5">
-      <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-7xl" />
-      <div class="my-8 flex flex-wrap gap-2">
+      <template v-if="data">
+        <ContentRenderer :value="data" class="prose my-10 mx-auto max-w-7xl" />
+        <div class="my-8 flex flex-wrap gap-2">
+          <NuxtLink
+            v-for="tag in data?.tags"
+            :key="tag"
+            :href="`/blog/tags/${tag}`"
+            class="text-sm font-semibold py-2 px-4 rounded-lg text-gray-100 bg-blue-500 uppercase flex w-fit items-center"
+          >
+            <CommonIcon name="Tag" :stroke-width="2" class="text-gray-100 mr-2" />
+            {{ tag }}
+          </NuxtLink>
+        </div>
+      </template>
+      <div v-else class="py-2 md:py-4 flex flex-col items-center">
+        <CommonIcon name="Squirrel" :stroke-width="2" :size="200" class="transform -scale-x-100" />
+        <span class="text-4xl font-poppinsBold my-2 md:my-4">Blog Not Found</span>
         <NuxtLink
-          v-for="tag in data.tags"
-          :key="tag"
-          :href="`/blog/tags/${tag}`"
-          class="text-sm font-semibold py-2 px-4 rounded-lg text-gray-100 bg-blue-500 uppercase flex w-fit items-center"
+          href="/blogs"
+          replace
+          :class="cn(buttonVariants({ variant: 'default', size: 'lg' }), 'flex items-center gap-2')"
         >
-          <CommonIcon name="Tag" :stroke-width="2" class="text-gray-100 mr-2" />
-          {{ tag }}
+          <CommonIcon name="ArrowLeft" :stroke-width="2" />
+          Back
         </NuxtLink>
       </div>
     </CommonFramerWrapper>
