@@ -53,7 +53,7 @@ useHead({
       </template>
       <div v-else class="py-2 md:py-4 flex flex-col items-center">
         <CommonIcon name="Squirrel" :stroke-width="2" :size="200" class="transform -scale-x-100" />
-        <span class="text-4xl font-poppinsBold my-2 md:my-4">Blog Not Found</span>
+        <span class="text-4xl font-poppinsBold my-4">Blog Not Found</span>
         <NuxtLink
           href="/blogs"
           replace
