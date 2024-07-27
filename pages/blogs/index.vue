@@ -10,11 +10,43 @@
       </CommonFramerWrapper>
     </div>
     <section class="mt-2 grid grid-cols-3 max-sm:grid-cols-1 max-lg:grid-cols-2 gap-5">
-      <BlogPost :posts="posts" />
+      <BlogPost :posts="posts.value" />
     </section>
+    <div class="flex items-center justify-center w-full">
+      <CommonPagination :total-item="totalBlog" :per-page="perPage" :current-page="currentPage" />
+    </div>
   </div>
 </template>
 
 <script setup>
-const { data: posts } = await useAsyncData("posts", () => queryContent("/blogs").sort({ date: -1 }).find());
+import { watch, reactive } from "vue";
+
+const route = useRoute();
+const perPage = 6;
+const currentPage = ref(1);
+const posts = reactive([]);
+const { data: totalBlog } = await useAsyncData("totalPage", () => queryContent("/blogs").count());
+
+watch(
+  () => [route.path, route.query],
+  async () => {
+    try {
+      currentPage.value = parseInt(route.query.page);
+      if (isNaN(currentPage.value)) throw new Error();
+    } catch (error) {
+      currentPage.value = 1;
+    }
+
+    const { data } = await useAsyncData("posts", () =>
+      queryContent("/blogs")
+        .sort({ date: -1 })
+        .skip((currentPage.value - 1) * perPage)
+        .limit(perPage)
+        .find(),
+    );
+
+    posts.value = data.value;
+  },
+  { immediate: true },
+);
 </script>
