@@ -10,7 +10,7 @@ import {
 
 import { Button } from "@/components/ui/button";
 
-const { totalItem, perPage, currentPage } = defineProps({
+const { totalItem, perPage, currentPage, totalPage, prevPage, nextPage } = defineProps({
   totalItem: {
     type: Number,
     required: true,
@@ -31,6 +31,10 @@ const { totalItem, perPage, currentPage } = defineProps({
     type: Number,
     required: true,
   },
+  totalPage: {
+    type: Number,
+    required: true,
+  },
 });
 
 function scrollToElement() {
@@ -39,7 +43,7 @@ function scrollToElement() {
 </script>
 
 <template>
-  <CommonFramerWrapper :delay="300">
+  <CommonFramerWrapper :delay="400">
     <Pagination
       v-slot="{ page }"
       :total="totalItem"
@@ -49,7 +53,7 @@ function scrollToElement() {
       :items-per-page="perPage"
     >
       <PaginationList v-slot="{ items }" class="flex items-center gap-1">
-        <NuxtLink :to="'/blogs?page=' + prevPage" @click="scrollToElement">
+        <NuxtLink v-if="totalPage > 1" :to="'/blogs?page=' + prevPage" @click="scrollToElement">
           <PaginationPrev />
         </NuxtLink>
 
@@ -63,7 +67,7 @@ function scrollToElement() {
           </PaginationListItem>
           <PaginationEllipsis v-else :key="item.type" :index="index" />
         </template>
-        <NuxtLink :to="'/blogs?page=' + nextPage" @click="scrollToElement">
+        <NuxtLink v-if="totalPage > 1" :to="'/blogs?page=' + nextPage" @click="scrollToElement">
           <PaginationNext />
         </NuxtLink>
       </PaginationList>

@@ -23,6 +23,7 @@
           :current-page="currentPage"
           :next-page="nextPage"
           :prev-page="prevPage"
+          :total-page="totalPage"
         />
       </div>
       <div v-else class="py-2 md:py-4 flex flex-col items-center">
@@ -65,7 +66,6 @@ watch(
       currentPage.value = 1;
     }
 
-    console.log(currentPage.value);
     prevPage = Math.max(currentPage.value - 1, 1);
     nextPage = Math.min(currentPage.value + 1, totalPage);
     const { data } = await useAsyncData("posts", () =>
