@@ -1,13 +1,13 @@
-import { ref, onMounted, onUnmounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 
-export const useShowNavbarScrolling = () => {
+export const useShowScrollToTop = () => {
   const show = ref<boolean>(false);
 
   const handleScrolling = () => {
-    if (window.scrollY > 0) {
-      show.value = false;
-    } else {
+    if (window.scrollY >= 300) {
       show.value = true;
+    } else {
+      show.value = false;
     }
   };
 
