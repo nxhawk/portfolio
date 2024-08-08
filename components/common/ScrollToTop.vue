@@ -1,7 +1,7 @@
 <template>
   <div
     v-show="show"
-    class="fixed z-[1000] bottom-8 right-10 rounded-full p-2 bg-slate-200/50 cursor-pointer hover:bg-slate-200"
+    class="fixed z-[1000] bottom-6 right-6 rounded-full p-2 bg-slate-200/50 cursor-pointer hover:bg-slate-200"
     @click="handleToTop"
   >
     <CommonIcon :stroke-width="3" name="ArrowUp" :size="30" color="#3FA2F6" />
