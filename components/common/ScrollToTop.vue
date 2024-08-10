@@ -13,43 +13,10 @@ import { useShowScrollToTop } from "~/composables/useShowScrollToTop";
 
 const { show } = useShowScrollToTop();
 
-function easeInOutCubic(t: number, b: number, c: number, d: number) {
-  t /= d / 2;
-  if (t < 1) return (c / 2) * t * t * t + b;
-  t -= 2;
-  return (c / 2) * (t * t * t + 2) + b;
-}
-
 function handleToTop() {
-  try {
-    const targetPosition = 0;
-    const startPosition = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (startPosition > 1500) {
-      const distance = targetPosition - startPosition;
-      const duration = 2000;
-      let start: number | null = null;
-
-      const step = (timestamp: number) => {
-        if (!start) start = timestamp;
-        const progress = timestamp - start;
-        window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
-        if (progress < duration) window.requestAnimationFrame(step);
-      };
-
-      window.requestAnimationFrame(step);
-    } else {
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  } catch (error) {
-    console.log(error);
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  }
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 }
 </script>
