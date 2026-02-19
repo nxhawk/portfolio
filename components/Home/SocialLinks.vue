@@ -21,7 +21,8 @@ import { buttonVariants } from "@/components/ui/button";
 const links = [
   { name: "Facebook", link: "https://www.facebook.com/hawknhat.jr3", icon: "Facebook" },
   { name: "Youtube", link: "https://www.youtube.com/@hawk.nx2", icon: "Youtube" },
-  { name: "Linkedin", link: "https://www.linkedin.com/in/hao-nguyen-97448a226/", icon: "Linkedin" },
+  { name: "Linkedin", link: "https://www.linkedin.com/in/haonhat/", icon: "Linkedin" },
   { name: "Github", link: "https://github.com/nxhawk", icon: "Github" },
 ];
 </script>
+
